@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
     //
     // run getHeroes, and _then_ when promise returns, as a function
     // use its parameter to set the heroes variable
-    this.heroService.getHeroes()
+    this.heroService.getHeroesSlowly()
       .then(heroes => {
         this.heroes = heroes
       });

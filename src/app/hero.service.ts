@@ -16,7 +16,6 @@ export class HeroService {
   // (so it needs to import Hero class, and HEROES service)
   getHeroes(): Promise<Hero[]> {
     // Return a resolved promise function
-    console.log(HEROES);
     return Promise.resolve(HEROES);
   }
 
@@ -28,3 +27,57 @@ export class HeroService {
     });
   }
 }
+
+
+/*
+
+myfunc() {
+  returns heroes;
+}
+
+
+let p = new Promise((resolve, reject) => {
+  $.ajax({
+    data: {
+
+    },
+    sucess : (data) => {
+      resolve(data.id);
+    }
+  });
+}).then((resolve, id) => {
+  // the code that runs here
+  $.ajax({
+    data : {
+      id
+    },
+    success : () => {
+      resolve(true)
+    },
+    fail : () {
+      reject("ajax failed");
+    }
+  })
+});
+
+
+let pb = new Promise((resolve, reject) => {
+  $.ajax({
+    data: {
+
+    },
+    sucess : (data) => {
+      resolve(data.id);
+    }
+  });
+})
+
+let pc = Promise.resolve(2);
+
+Promise.all((p, pb, pc) => {
+
+}).catch() {
+operation failwed
+};
+
+*/
